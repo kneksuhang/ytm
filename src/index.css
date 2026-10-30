@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --yt-red: #ff0000;
+    --yt-red-hover: #cc0000;
+    --yt-bg: #0f0f0f;
+    --yt-surface: #181818;
+    --yt-surface-hover: #222222;
+    --yt-surface-active: #272727;
+    --yt-border: #282828;
+    --yt-text: #f1f1f1;
+    --yt-text-muted: #aaaaaa;
+    --yt-chip-bg: #272727;
+    --yt-font-family: Roboto, Arial, sans-serif;
+  }
+
+  html.light,
+  body.light,
+  .light {
+    --yt-bg: #f9f9f9;
+    --yt-surface: #ffffff;
+    --yt-surface-hover: #f2f2f2;
+    --yt-surface-active: #e5e5e5;
+    --yt-border: #e5e5e5;
+    --yt-text: #0f0f0f;
+    --yt-text-muted: #606060;
+    --yt-chip-bg: #f0f0f0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--yt-bg);
+    color: var(--yt-text);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* ============================================================== */
+/* PENGATURAN TEMA TERANG (LIGHT THEME) LENGKAP ALA YOUTUBE       */
+/* Memastikan seluruh layout, navbar, card, input, dan teks       */
+/* berubah sempurna ke mode terang saat preferensi aktif.         */
+/* ============================================================== */
+html.light,
+body.light,
+.light {
+  background-color: #f9f9f9 !important;
+  color: #0f0f0f !important;
+}
+
+/* 1. Header Navbar, Sidebar, Bottom Navigation, Drawer Mobile */
+.light header,
+.light aside,
+.light nav,
+.light .bg-\[\#0f0f0f\],
+.light .bg-\[\#0f0f0f\]\/95 {
+  background-color: #ffffff !important;
+  border-color: #e5e5e5 !important;
+  color: #0f0f0f !important;
+}
+
+/* 2. Kartu (Cards) dan Permukaan Utama (Surfaces) */
+.light .bg-\[\#181818\],
+.light .bg-\[\#1c1c1c\],
+.light .bg-\[\#212121\] {
+  background-color: #ffffff !important;
+  border-color: #e5e5e5 !important;
+  color: #0f0f0f !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+}
+
+.light .hover\:bg-\[\#202020\]:hover,
+.light .hover\:bg-\[\#222222\]:hover {
+  background-color: #f4f4f5 !important;
+}
+
+/* 3. Latar Belakang Sekunder / Pill / Chip / Input Box */
+.light .bg-neutral-900,
+.light .bg-neutral-900\/40,
+.light .bg-neutral-900\/60,
+.light .bg-neutral-900\/80,
+.light .bg-neutral-900\/90,
+.light .bg-neutral-950 {
+  background-color: #f4f4f5 !important;
+  border-color: #e5e5e5 !important;
+  color: #0f0f0f !important;
+}
+
+.light .bg-neutral-800,
+.light .bg-neutral-800\/60,
+.light .bg-neutral-800\/70,
+.light .bg-neutral-800\/80,
+.light .bg-neutral-800\/90 {
+  background-color: #ebebeb !important;
+  border-color: #e5e5e5 !important;
+  color: #0f0f0f !important;
+}
+
+.light .hover\:bg-neutral-800:hover,
+.light .hover\:bg-neutral-700:hover,
+.light .hover\:bg-neutral-900:hover,
+.light .hover\:bg-neutral-850:hover {
+  background-color: #e4e4e7 !important;
+}
+
+/* 4. Warna Teks (Typography) */
+.light .text-white:not(.keep-white):not([class*="bg-red"]):not([class*="bg-[#ff0000]"]):not([class*="bg-[#cc0000]"]):not([class*="bg-black"]) {
+  color: #0f0f0f !important;
+}
+
+/* Pengecualian Elemen yang Selalu Harus Berwarna Teks Putih */
+.light .bg-\[\#ff0000\],
+.light .bg-\[\#ff0000\] *,
+.light .bg-\[\#cc0000\],
+.light .bg-\[\#cc0000\] *,
+.light .bg-red-600,
+.light .bg-red-600 *,
+.light .bg-red-700,
+.light .bg-red-700 *,
+.light .bg-black,
+.light .bg-black *,
+.light .bg-black\/80,
+.light .bg-black\/80 *,
+.light .bg-black\/85,
+.light .bg-black\/85 *,
+.light .bg-black\/60,
+.light .bg-black\/60 *,
+.light [class*="bg-black"],
+.light [class*="bg-black"] *,
+.light .keep-white,
+.light .keep-white * {
+  color: #ffffff !important;
+}
+
+/* Badge Status Tontonan (To Watch, Watching, Watched) pada Tema Terang */
+.light .bg-emerald-950\/80,
+.light .bg-emerald-950\/90 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #047857 !important;
+}
+.light .bg-amber-950\/80,
+.light .bg-amber-950\/90 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #b45309 !important;
+}
+
+.light .text-neutral-100,
+.light .text-neutral-200,
+.light .text-neutral-300 {
+  color: #27272a !important;
+}
+
+.light .text-neutral-400 {
+  color: #52525b !important;
+}
+
+.light .text-neutral-500 {
+  color: #71717a !important;
+}
+
+.light label,
+.light label span {
+  color: #18181b !important;
+}
+
+/* 5. Garis Pembatas (Borders) */
+.light .border-neutral-800,
+.light .border-neutral-800\/60,
+.light .border-neutral-800\/70,
+.light .border-neutral-800\/80,
+.light .border-neutral-700,
+.light .border-neutral-700\/60,
+.light .border-neutral-700\/80 {
+  border-color: #e5e5e5 !important;
+}
+
+/* 6. Komponen Formulir (Input, Select, Textarea) */
+.light input:not([type="checkbox"]):not([type="radio"]):not([type="range"]),
+.light select,
+.light textarea {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+  border-color: #d4d4d8 !important;
+}
+
+.light input:not([type="checkbox"]):not([type="radio"]):not([type="range"])::placeholder,
+.light textarea::placeholder {
+  color: #a1a1aa !important;
+}
+
+.light select option {
+  background-color: #ffffff !important;
+  color: #0f0f0f !important;
+}
+
+/* 7. Dialog Modal & Dropdown Menu */
+.light [role="dialog"],
+.light .z-50.bg-\[\#181818\] {
+  background-color: #ffffff !important;
+  border-color: #e5e5e5 !important;
+  color: #0f0f0f !important;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 8. Tabel Responsif */
+.light thead {
+  background-color: #f4f4f5 !important;
+  color: #52525b !important;
+  border-color: #e5e5e5 !important;
+}
+
+.light tbody tr:hover,
+.light .hover\:bg-neutral-850\/60:hover {
+  background-color: #f8fafc !important;
+}
+
+/* 9. Skeleton Loader pada Tema Terang */
+.light .animate-pulse div,
+.light .animate-pulse {
+  background-color: #e2e8f0 !important;
+}
+
+/* 10. Kode Blok Pre (SQL Schema Settings) */
+.light pre {
+  background-color: #f4f4f5 !important;
+  color: #1e293b !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Kustomisasi Scrollbar Ala YouTube */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f3f;
+  border-radius: 4px;
+}
+.light ::-webkit-scrollbar-thumb,
+html.light ::-webkit-scrollbar-thumb {
+  background: #cccccc;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555555;
+}
+
+/* Utility kelas animasi lembut */
+.transition-smooth {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
